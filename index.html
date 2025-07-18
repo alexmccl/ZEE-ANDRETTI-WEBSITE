@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZEE | Coming Soon</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #8a9a7b;
+      font-family: 'Helvetica Neue', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+
+    .grain-overlay {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">\
+<filter id="grain">\
+<feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="5" stitchTiles="stitch" />\
+<feColorMatrix type="saturate" values="0"/>\
+</filter>\
+<rect width="100%" height="100%" filter="url(%23grain)" opacity="0.2"/>\
+</svg>');
+      background-repeat: repeat;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    header {
+      margin-bottom: 30px;
+    }
+
+    .zee-logo-img {
+      max-width: 590px;
+      height: auto;
+      user-select: none;
+    }
+
+    .coming-soon {
+      font-size: 1.1rem;
+      font-weight: normal;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+      margin-bottom: 30px;
+      opacity: 0.8;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: none;
+      outline: none;
+      color: #fff;
+      background-color: #8a9a7b;
+      background-image: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">\
+<filter id="grain">\
+<feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="5" stitchTiles="stitch" />\
+<feColorMatrix type="saturate" values="0"/>\
+</filter>\
+<rect width="100%" height="100%" filter="url(%23grain)" opacity="0.2"/>\
+</svg>');
+      background-repeat: repeat;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 24px;
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e2e2e2;
+    }
+
+    @media (max-width: 600px) {
+      .zee-logo-img {
+        max-width: 130px;
+      }
+
+      .coming-soon {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Grain Layer -->
+  <div class="grain-overlay"></div>
+
+  <!-- Main Content -->
+  <div class="content">
+
+    <header>
+      <img src="ZEE_logo_transparent.png" alt="ZEE Logo" class="zee-logo-img" />
+    </header>
+
+    <div class="coming-soon">new shit soon</div>
+
+    <form action="https://formspree.io/f/xrblbylj" method="POST">
+      <textarea name="message" placeholder="watsup?" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
